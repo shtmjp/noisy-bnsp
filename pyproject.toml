@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "cython", "numpy>2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "noisy-bnsp"
+version = "0.1.0"
+description = "A Python library to simulate and inference on the noisy bivariate Neyman-Scott process."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "Takaaki Shiotani", email = "shtm.1058@gmail.com" }]
+keywords = ["point process", "simulation", "inference"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+]
+dependencies = ["cython>=3.0.11", "numpy>=2.2.1", "scipy>=1.14.1"]
+
+[tool.uv]
+dev-dependencies = [
+    "ipykernel>=6.29.5",
+    "joblib>=1.4.2",
+    "matplotlib>=3.10.0",
+    "pandas>=2.2.3",
+    "ruff>=0.8.5",
+    "tqdm>=4.67.1",
+]
+
+[tool.setuptools]
+packages = ["noisy_bnsp"]
