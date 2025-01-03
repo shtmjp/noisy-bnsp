@@ -9,9 +9,6 @@
     },
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "ruff.interpreter": [
-        ".venv/bin/python"
-    ],
     "ruff.importStrategy": "fromEnvironment",
     "ruff.configurationPreference": "filesystemFirst"
 }

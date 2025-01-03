@@ -39,7 +39,7 @@ double cross_wl_exp(double r, double T, double a, double tau1, double tau2, int 
         {
             continue;
         }
-        flag = 0; // 初めてdiff>=rを満たすjを見つけたら、flag=1にして、次回のjの探索をstart_jから始める
+        flag = 0; // Set flag = 1 when you find the first j that satisfies diff >= r, and start the next search for j from start_j.
         for (int j = start_j; j < len_of_data2; j++)
         {
             diff = data2[j] - data1[i]; // 単調増加

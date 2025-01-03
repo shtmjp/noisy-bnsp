@@ -1,4 +1,4 @@
-# noisy_bnsp/__init__.py
+"""noisy-bnsp: simulate and estimate noisy bivariate Neyman-Scott process."""
 
 __version__ = "0.1.0"
 
@@ -7,9 +7,9 @@ import c_func
 from .nsmodels import EstConfig, Estimator, NSExpModel, NSGammaModel
 
 __all__ = [
-    "c_func",
+    "EstConfig",
+    "Estimator",
     "NSExpModel",
     "NSGammaModel",
-    "Estimator",
-    "EstConfig",
+    "c_func",
 ]

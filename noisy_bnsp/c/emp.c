@@ -6,8 +6,8 @@ double pair_corr_estimator(double u, double T, double h, int len_of_data, double
 {
     // uniform kernel estimator of pair correlation function
     // Illian et al. 2008, pp.230-232
-    // dataは昇順ソート済みとしている
-    double estimator = 0; // 最後に2hで割る
+    // Assume data is sorted in ascending order
+    double estimator = 0;
     double diff = 0;
 
     for (int i = 0; i < len_of_data; i++)
@@ -37,19 +37,15 @@ double pair_corr_estimator(double u, double T, double h, int len_of_data, double
 double cross_corr_estimator(double u, double T, double h, int len_of_data1, int len_of_data2, double data1[], double data2[])
 {
     // uniform kernel estimator of cross correlation function
-    // dataは昇順ソート済みとしている
-    /*
-    data2 - u vs data1の相関を見る.
-    もしピークがu<0にあれば, data1が先行している.
-
-    */
+    // Estimate correlation of (data2 - u) and data1
+    // Assume data1 and data2 are sorted in ascending order
     double estimator = 0; // 最後に2hで割る
     double diff = 0;
     int start_j = 0;
     int flag = 0;
     for (int i = 0; i < len_of_data1; i++)
     {
-        flag = 0; // 初めてdiff-r>=-hを満たすjを見つけたら、flag=1にして、次回のjの探索をstart_jから始める
+        flag = 0; // Set flag = 1 when you find the first j that satisfies diff - r >= -h, and start the next search for j from start_j.
         for (int j = start_j; j < len_of_data2; j++)
         {
             diff = data2[j] - data1[i]; // 単調増加

@@ -8,9 +8,8 @@ Emperical analysis
 
 def pair_corr_estimator(r, T, h, cnp.ndarray[double, ndim=1, mode="c"] data):
     len_of_data = len(data)
-    # dataがメモリ上連続して並ぶことを保証する
-    #if not data.flags['C_CONTIGUOUS']:
-    #    data = np.ascontiguousarray(data)
+    if not data.flags['C_CONTIGUOUS']:
+        data = np.ascontiguousarray(data)
     cdef double r_c=r, T_c=T, h_c=h
     cdef double *data_c
     data_c = <double *> data.data
