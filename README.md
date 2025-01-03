@@ -13,5 +13,5 @@ A Python package to simulate and estimate the noisy-BNSP model.
 
 ## TODO
 
-- complete docstrings
-- add documents
+- Add docs by sphinx
+- Add real-data example
