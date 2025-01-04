@@ -11,7 +11,6 @@ requires-python = ">=3.12"
 authors = [{ name = "Takaaki Shiotani", email = "shtm.1058@gmail.com" }]
 keywords = ["point process", "simulation", "inference"]
 classifiers = [
-    "Programming Language :: Python",
     "Programming Language :: C",
     "Programming Language :: Python :: 3",
 ]
@@ -25,7 +24,12 @@ dev-dependencies = [
     "pandas>=2.2.3",
     "ruff>=0.8.5",
     "tqdm>=4.67.1",
+    "twine>=6.0.1",
 ]
 
 [tool.setuptools]
 packages = ["noisy_bnsp"]
+
+[project.urls]
+Homepage = "https://github.com/shtmjp/noisy-bnsp"
+Issues = "https://github.com/shtmjp/noisy-bnsp/issues"
