@@ -14,7 +14,12 @@ classifiers = [
     "Programming Language :: C",
     "Programming Language :: Python :: 3",
 ]
-dependencies = ["cython>=3.0.11", "numpy>=2.2.1", "scipy>=1.14.1"]
+dependencies = [
+    "cython>=3.0.11",
+    "numpy>=2.2.1",
+    "requests>=2.32.3",
+    "scipy>=1.14.1",
+]
 
 [tool.uv]
 dev-dependencies = [

@@ -626,6 +626,7 @@ source = { editable = "." }
 dependencies = [
     { name = "cython" },
     { name = "numpy" },
+    { name = "requests" },
     { name = "scipy" },
 ]
 
@@ -644,6 +645,7 @@ dev = [
 requires-dist = [
     { name = "cython", specifier = ">=3.0.11" },
     { name = "numpy", specifier = ">=2.2.1" },
+    { name = "requests", specifier = ">=2.32.3" },
     { name = "scipy", specifier = ">=1.14.1" },
 ]
 
